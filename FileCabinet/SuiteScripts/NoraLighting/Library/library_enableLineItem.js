@@ -37,7 +37,7 @@ function(record) {
                 value: true
             });
 
-            if (inLineShipGroup.shipTo == '' || inLineShipGroup.shipTo == null) {
+            if (!inLineShipGroup.shipTo) {
                 var inShipAddress = createLine1ShipAddress(recSalesOrder);
 
                 for (var indxShip = 0; indxShip < inItem; indxShip++) {
